@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Read</title>
+    <link rel="stylesheet" href="/bootstrap-5.0.2-dist/bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="read.css">
+</head>
+
+<body>
+    <header class="navbar-custom">
+        <nav class="container d-flex justify-content-between align-items-center">
+            <ul class="nav_logo">
+                <li class="nav-item">
+                    <a href="index.html">
+                        <img class="logo" src="/Logo Web/Desain tanpa judul.png" alt="STORYVERSE_Logo">
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="Read.html">
+                        <img src="/Icon/check_box_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png">
+                        <span>Read</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="Bookmarks.html">
+                        <img src="/Icon/book_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png">
+                        <span>Bookmarks</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#">
+                        <img src="/Icon/library_books_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png">
+                        <span>Forum</span>
+                    </a>
+                </li>
+            </ul>
+            <div class="nav_right">
+                <div class="search-box">
+                    <img src="/Icon/search_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png">
+                    <input type="text" placeholder="Search">
+                </div>
+                <div class="nav_profile">
+                    <a href="#">
+                        <img src="/Icon/person_100dp_E3E3E3_FILL0_wght700_GRAD0_opsz48.png" alt="Avatar">
+                    </a>
+                </div>
+            </div>
+
+        </nav>
+    </header>
+
+    <main>
+        <section class="already_read">
+            <div class="container">
+                <h1 class="already_read_title">Already Read</h1>
+                <div id="result"></div>
+                    <script>
+                    window.addEventListener("DOMContentLoaded", function () {
+                    const content = localStorage.getItem("finalSavedItems");
+                    if (content) {
+                        
+                        document.getElementById("result").innerHTML =
+                            `<div class="saved-item">${content}</div>`;
+                    } else {
+                        document.getElementById("result").innerHTML =
+                            "<p style='text-align:center; opacity:0.7;'>Tidak ada data tersimpan.</p>";
+                    }
+                    });
+                    </script>
+            </div>
+        </section>
+    </main>
+
+    <footer class="custom-footer">
+        <div class="footer-top">
+            <div class="footer-left">
+                <a href="index.html">
+                    <img src="/Logo Web/Desain tanpa judul.png" class="footer-logo">
+                </a>
+            </div>
+
+            <div class="footer-menu">
+            <div class="footer-col">
+                <a href="#">Help</a>
+                <a href="#">Forums</a>
+            </div>
+            <div class="footer-col">
+                <a href="#">Newsfeed</a>
+                <a href="#">Contact</a>
+            </div>
+            <div class="footer-col">
+                <a href="#">Publish</a>
+            </div>
+            </div>
+
+            <div class="footer-right">
+            <a href="#"><img src="/Logo/facebook.png" alt=""></a>
+            <a href="#"><img src="/Logo/instagram.png" alt=""></a>
+            <a href="#"><img src="/Logo/tik-tok.png" alt=""></a>
+            <a href="#"><img src="/Logo/twitter.png" alt=""></a>
+            </div>
+        </div>
+
+        <hr class="footer-line">
+
+        <div class="footer-bottom">
+            <span class="footer-copy">Copyright © 2025</span>
+            <div class="footer-links">
+            <a href="#">Terms of Service</a>
+            <span>·</span>
+            <a href="#">Privacy Policy</a>
+            <span>·</span>
+            <a href="#">Cookie Policy</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
