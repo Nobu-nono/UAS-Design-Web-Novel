@@ -209,16 +209,15 @@
     let paragraph = document.getElementById("chapter-content");
     let originalText = paragraph.innerHTML;
 
-    document.getElementById("seacrh-box").addEventListener("input", search);
+    document.getElementById("search-box").addEventListener("input", search);
 
     function search() {
-        let textToSearch = document.getElementById("seacrh-box").value;
+        let textToSearch = document.getElementById("search-box").value;
 
         if (textToSearch.trim() === "") {
             paragraph.innerHTML = originalText;
             return;
         }
-
         let escaped = textToSearch.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
         let pattern = new RegExp(escaped, "gu");
 

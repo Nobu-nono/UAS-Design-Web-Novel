@@ -382,18 +382,13 @@
             </div>
         </div>
     </footer>
-
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="/bootstrap-5.0.2-dist/bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
     <script>
-
         $(document).ready(function(){
     $("#search-box").on("keyup", function() {
-
         var value = $(this).val().toLowerCase();
-
         $(".popular-carousel .card").filter(function() {
-        
         $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
         });
     });

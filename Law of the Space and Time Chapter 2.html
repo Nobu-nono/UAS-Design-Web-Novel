@@ -38,7 +38,7 @@
             <div class="nav_right">
                 <div class="search-box">
                     <img src="/Icon/search_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png">
-                    <input id="seacrh-box" type="text" placeholder="Search">
+                    <input id="search-box" type="text" placeholder="Search">
                 </div>
                 <div class="nav_profile">
                     <a href="#">
@@ -221,10 +221,10 @@
     let paragraph = document.getElementById("chapter-content");
     let originalText = paragraph.innerHTML;
 
-    document.getElementById("seacrh-box").addEventListener("input", search);
+    document.getElementById("search-box").addEventListener("input", search);
 
     function search() {
-        let textToSearch = document.getElementById("seacrh-box").value;
+        let textToSearch = document.getElementById("search-box").value;
 
         if (textToSearch.trim() === "") {
             paragraph.innerHTML = originalText;
